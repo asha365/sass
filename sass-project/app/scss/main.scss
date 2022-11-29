@@ -1,0 +1,123 @@
+@forward "./base/index.scss";
+@use "./util/index.scss" as variable;
+
+@each $color in red, green, blue {
+    .#{$color}-text {
+        color: $color;
+    }
+}
+
+
+@mixin setFontSize($value) {
+    @if $value == small{
+        font-size: 12px;
+    }
+    @else if $value == medium{
+        font-size: 12px;
+    }
+    @else if $value == large{
+        font-size: 20px;
+    }
+    @else{
+        font-size: none;
+    }
+}
+
+[class*="col-"]{
+    float: left;
+}
+//sass for loop
+// @for $i from 1 through  12{
+//     .col-#{$i} {
+//         width: 100% / 12 * $i;
+//     }
+// }
+
+//sass while loop
+$i : 1;
+@while $i < 13 {
+    .col-#{$i} {
+        width: 100% /12 * $i;
+    }
+}
+
+.row::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin: 0px 15px;
+    }
+    
+    nav ul li a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 5px;
+        @include setFontSize(large);
+    }
+    
+    nav ul li a:hover {
+        background-color: black;
+    }
+
+header{
+    background-color: variable.$header-bg;
+    padding: 1rem;
+}
+
+#about{
+    background-color: variable.$main-bg;
+    padding: 1rem;
+}
+.btn{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+.btn-download{
+    @extend .btn;
+    background-color: green;
+  
+}
+.learn-more{
+    @extend .btn;
+    background-color: orange;
+}
+#education{
+    background-color: variable.$education-bg;
+}
+
+// .col-1 {width: 8.33%;}
+// .col-2 {width: 16.66%;}
+// .col-3 {width: 25%;}
+// .col-4 {width: 33.33%;}
+// .col-5 {width: 41.66%;}
+// .col-6 {width: 50%;}
+// .col-7 {width: 58.33%;}
+// .col-8 {width: 66.66%;}
+// .col-9 {width: 75%;}
+// .col-10 {width: 83.33%;}
+// .col-11 {width: 91.66%;}
+// .col-12 {width: 100%;}

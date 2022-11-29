@@ -1,0 +1,55 @@
+//color variable declaration
+$header-bgColor: #8f5834;
+$main-bgColor: #ffab23;
+$footer-bgColor: rgba(3, 22, 29, 0.333);
+
+// $para-fontSize: 20px;
+
+/* browser reset code*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: $header-bgColor;
+}
+
+
+
+
+
+
+
+
+//nav style
+nav{
+    margin-top: 15px;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            margin: 0px 15px;
+            a{
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+                align-items: center;
+                transition: 0.4s;
+                border-radius: 5px;
+            }
+            a:hover{
+                background-color: black;
+            }
+        }
+    }
+}
+
+
+main{
+    background-color: $main-bgColor;
+}
+footer{
+    background-color: $footer-bgColor;
+}

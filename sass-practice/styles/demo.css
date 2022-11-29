@@ -1,0 +1,50 @@
+/* browser reset code*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #8f5834;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: black;
+}
+
+main {
+  background-color: #ffab23;
+}
+
+footer {
+  background-color: rgba(3, 22, 29, 0.333);
+}
+/*# sourceMappingURL=demo.css.map */
